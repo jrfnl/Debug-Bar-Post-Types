@@ -47,7 +47,7 @@ if ( !function_exists( 'dbpt_has_parent_plugin' ) ) {
 	 */
 	function dbpt_has_parent_plugin() {
 		if ( is_admin() && ( !class_exists( 'Debug_Bar' ) && current_user_can( 'activate_plugins' ) ) ) {
-			add_action( 'admin_notices', create_function( null, 'echo \'<div class="error"><p>\' . sprintf( __( \'Activation failed: Debug Bar must be activated to use the <strong>Debug Bar Post Types</strong> Plugin. <a href="%s">Visit your plugins page to activate</a>.\', \'debug-bar-post-types\' ), admin_url( \'plugins.php#debug-bar\' ) ) . \'</p></div>\';' ) );
+			add_action( 'admin_notices', create_function( null, 'echo \'<div class="error"><p>\' . sprintf( __( \'Activation failed: Debug Bar must be activated to use the <strong>Debug Bar Post Types</strong> Plugin. %sVisit your plugins page to activate.\', \'debug-bar-post-types\' ), \'<a href="\' . admin_url( \'plugins.php#debug-bar\' ) . \'">\' ) . \'</a></p></div>\';' ) );
 
 			deactivate_plugins( plugin_basename( __FILE__ ) );
 			if ( isset( $_GET['activate'] ) ) {

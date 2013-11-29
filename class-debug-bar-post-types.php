@@ -67,7 +67,6 @@ if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' 
 		<h2><span>' . esc_html__( 'Total Post Types:', self::DBPT_NAME ) . '</span>' . esc_html( $count ) . '</h2>';
 
 			if ( is_array( $wp_post_types ) && $count > 0 ) {
-
 				/* Put the relevant info in arrays */
 				foreach ( $wp_post_types as $name => $post_type_obj ) {
 					$props = get_object_vars( $post_type_obj );
