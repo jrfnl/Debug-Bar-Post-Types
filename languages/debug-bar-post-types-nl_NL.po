@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Debug Bar Post Types - a WordPress Plugin\n"
+"POT-Creation-Date: 2013-11-29 11:51+0100\n"
+"PO-Revision-Date: 2013-11-29 11:54+0100\n"
+"Last-Translator: EJ Reinders Folmer <poedit_nospam@adviesenzo.nl>\n"
+"Language-Team: \n"
+"Language: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;esc_html__;esc_html_e;esc_attr__;esc_attr_e;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../class-debug-bar-post-types.php:40
+msgid "Post Types"
+msgstr "Post Types"
+
+#: ../class-debug-bar-post-types.php:67
+msgid "Total Post Types:"
+msgstr "Totaal Post Types:"
+
+#: ../class-debug-bar-post-types.php:102 ../class-debug-bar-post-types.php:109
+#: ../class-debug-bar-pretty-output.php:232
+msgid "Property"
+msgstr "Eigenschap"
+
+#: ../class-debug-bar-post-types.php:115
+msgid "Post Type Properties:"
+msgstr "Post Type Eigenschappen:"
+
+#: ../class-debug-bar-post-types.php:171 ../class-debug-bar-post-types.php:178
+msgid "Capability"
+msgstr "Capaciteit"
+
+#: ../class-debug-bar-post-types.php:183
+msgid "Post Type Capabilities:"
+msgstr "Post Type Capaciteiten:"
+
+#: ../class-debug-bar-post-types.php:207
+msgid "Has capability"
+msgstr "Heeft capaciteit"
+
+#: ../class-debug-bar-post-types.php:207
+msgid "Does not have capability"
+msgstr "Heeft capaciteit niet"
+
+#: ../class-debug-bar-post-types.php:228
+msgid "No post types found."
+msgstr "Geen post-types gevonden."
+
+#: ../class-debug-bar-pretty-output.php:97
+msgid "undetermined"
+msgstr ""
+
+#: ../class-debug-bar-pretty-output.php:155
+msgid "I haven't got a clue what this is: "
+msgstr ""
+
+#: ../class-debug-bar-pretty-output.php:221
+msgid "Properties:"
+msgstr "Eigenschappen:"
+
+#: ../class-debug-bar-pretty-output.php:222
+msgid "Methods:"
+msgstr "Methoden:"
+
+#: ../class-debug-bar-pretty-output.php:229
+msgid "Object Properties:"
+msgstr "Object Eigenschappen:"
+
+#: ../class-debug-bar-pretty-output.php:232
+#: ../class-debug-bar-pretty-output.php:273
+msgid "Value"
+msgstr "Waarde"
+
+#: ../class-debug-bar-pretty-output.php:238
+msgid "Object Methods:"
+msgstr "Object Methoden:"
+
+#: ../class-debug-bar-pretty-output.php:272
+msgid "Key"
+msgstr ""
+
+#~ msgid "WP Screen"
+#~ msgstr "WP Screen"
+
+#~ msgid "Screen:"
+#~ msgstr "Scherm:"
+
+#~ msgid "Screen object not found."
+#~ msgstr "Screen object niet gevonden."
+
+#~ msgid ""
+#~ "Debug Bar must be activated to use the Debug Bar WP Objects Plugin. <a "
+#~ "href=\"%s\">Visit your plugins page to activate</a>."
+#~ msgstr ""
+#~ "Debug Bar moet geactiveerd zijn om de Debug Bar WP Objects Plugin te "
+#~ "kunnen gebruiken. <a href=\"%s\">Ga naar de plugins pagina om deze te "
+#~ "activeren</a>."
