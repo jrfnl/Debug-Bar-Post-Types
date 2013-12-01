@@ -1,15 +1,15 @@
 <?php
 /**
- * Debug Bar Post Types
+ * Debug Bar Post Types, a WordPress plugin
  *
- * @package WordPress\Plugins\Debug Bar Post Types
- * @since 1.0
- * @version 1.0
+ * @package		WordPress\Plugins\Debug Bar Post Types
+ * @author		Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
+ * @link		https://github.com/jrfnl/Debug-Bar-Post-Types
+ * @since		1.0
+ * @version		1.0.1
  *
- * @author Juliette Reinders Folmer
- *
- * @copyright 2013 Juliette Reinders Folmer
- * @license http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2
+ * @copyright	2013 Juliette Reinders Folmer
+ * @license		http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  */
 
 // Avoid direct calls to this file
@@ -26,7 +26,7 @@ if ( !function_exists( 'add_action' ) ) {
 if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' ) ) {
 	class Debug_Bar_Post_Types extends Debug_Bar_Panel {
 
-		const DBPT_STYLES_VERSION = '1.0';
+		const DBPT_STYLES_VERSION = '1.0.1';
 
 		const DBPT_NAME = 'debug-bar-post-types';
 

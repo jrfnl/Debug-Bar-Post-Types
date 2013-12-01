@@ -1,33 +1,26 @@
 <?php
-/*
-Plugin Name: Debug Bar Post Types
-Plugin URI: http://wordpress.org/extend/plugins/debug-bar-post-types/
-Description: Debug Bar Post Types adds a new panel to the Debug Bar that displays detailed information about the registered post types for your site. Requires "Debug Bar" plugin.
-Version: 1.0
-Author: Juliette Reinders Folmer
-Author URI: http://www.adviesenzo.nl/
-Text Domain: debug-bar-post-types
-Domain Path: /languages/
-
-Copyright 2013 Juliette Reinders Folmer
-*/
-/*
-GNU General Public License, Free Software Foundation <http://creativecommons.org/licenses/GPL/2.0/>
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-*/
+/**
+ * Debug Bar Post Types, a WordPress plugin
+ *
+ * @package		WordPress\Plugins\Debug Bar Post Types
+ * @author		Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
+ * @link		https://github.com/jrfnl/Debug-Bar-Post-Types
+ * @version		1.0.1
+ *
+ * @copyright	2013 Juliette Reinders Folmer
+ * @license		http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
+ *
+ * @wordpress-plugin
+ * Plugin Name:	Debug Bar Post Types
+ * Plugin URI:	http://wordpress.org/extend/plugins/debug-bar-post-types/
+ * Description:	Debug Bar Post Types adds a new panel to the Debug Bar that displays detailed information about the registered post types for your site. Requires "Debug Bar" plugin.
+ * Version:		1.0
+ * Author:		Juliette Reinders Folmer
+ * Author URI:	http://www.adviesenzo.nl/
+ * Text Domain:	debug-bar-post-types
+ * Domain Path:	/languages/
+ * Copyright:	2013 Juliette Reinders Folmer
+ */
 
 // Avoid direct calls to this file
 if ( !function_exists( 'add_action' ) ) {

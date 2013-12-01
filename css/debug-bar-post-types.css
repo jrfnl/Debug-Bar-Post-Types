@@ -5,7 +5,7 @@
 	margin-top: 1.2em;
 	clear: both;
 }
-table.debug-bar-post-types {
+#debug-menu-target-Debug_Bar_Post_Types table.debug-bar-post-types {
 	width: 100%;
 	border-collapse: collapse;
 	cell-padding: 1em;
@@ -19,34 +19,34 @@ table.debug-bar-post-types {
 	min-width: 60px;
 }
 
-.debug-bar-post-types td {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types td {
 	padding: 2px 5px;
 }
 
-.debug-bar-post-types th {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types th {
     font-weight: bold;
     padding-right: 1em;
     vertical-align: top;
 }
-.debug-bar-post-types thead th,
-.debug-bar-post-types tfoot th {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types thead th,
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types tfoot th {
     padding: 0.7em 5px;
     border-bottom: 1px solid #ccc;
 }
-.debug-bar-post-types-caps thead th,
-.debug-bar-post-types-caps tfoot th,
-.debug-bar-post-types-caps td {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types-caps thead th,
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types-caps tfoot th,
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types-caps td {
 	text-align: center;
 }
 
-.debug-bar-post-types tr:nth-child(2n+1) {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types tr:nth-child(2n+1) {
 	background-color: #E8E8E8;
 }
 
-ul.debug-bar-post-types {
+#debug-menu-target-Debug_Bar_Post_Types ul.debug-bar-post-types {
 	list-style-type: square !important;
 	padding-left: 20px !important;
 }
-.debug-bar-post-types-table-end {
+#debug-menu-target-Debug_Bar_Post_Types .debug-bar-post-types-table-end {
 	text-align: right;
 }
