@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
 Tested up to: 3.8-beta1
-Stable tag: 1.0.1
+Stable tag: 1.1
 Depends: debug-bar
 License: GPLv2
 
@@ -45,14 +45,18 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
-= 1.0.1 DEV =
+= 1.1 (2013-12-02) =
 * Minor tidying up
+* Moved pretty print class to separate repository as several plugins are using it now.
 
 = 1.0 (2013-11-29) =
 * Initial release
 
 
 == Upgrade Notice ==
+
+= 1.1 =
+* Upgrade highly recommended - multi-plugin compatibility issue
 
 = 1.0 =
 * Initial release

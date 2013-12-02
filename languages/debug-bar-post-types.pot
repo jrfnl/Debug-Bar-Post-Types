@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Debug Bar Constants - a WordPress Plugin\n"
-"POT-Creation-Date: 2013-11-29 11:51+0100\n"
-"PO-Revision-Date: 2013-11-29 11:51+0100\n"
+"POT-Creation-Date: 2013-12-02 07:17+0100\n"
+"PO-Revision-Date: 2013-12-02 07:17+0100\n"
 "Last-Translator: EJ Reinders Folmer <poedit_nospam@adviesenzo.nl>\n"
 "Language-Team: Juliette Reinders Folmer <wp_dbc_plugin_nospam@adviesenzo."
 "nl>\n"
-"Language: English\n"
+"Language: English (en_US)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,16 +17,16 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../class-debug-bar-post-types.php:40
+#: ../class-debug-bar-post-types.php:36
 msgid "Post Types"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:67
+#: ../class-debug-bar-post-types.php:68
 msgid "Total Post Types:"
 msgstr ""
 
 #: ../class-debug-bar-post-types.php:102 ../class-debug-bar-post-types.php:109
-#: ../class-debug-bar-pretty-output.php:232
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:270
 msgid "Property"
 msgstr ""
 
@@ -34,55 +34,76 @@ msgstr ""
 msgid "Post Type Properties:"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:171 ../class-debug-bar-post-types.php:178
+#: ../class-debug-bar-post-types.php:177 ../class-debug-bar-post-types.php:184
 msgid "Capability"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:183
+#: ../class-debug-bar-post-types.php:189
 msgid "Post Type Capabilities:"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:207
+#: ../class-debug-bar-post-types.php:213
 msgid "Has capability"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:207
+#: ../class-debug-bar-post-types.php:213
 msgid "Does not have capability"
 msgstr ""
 
-#: ../class-debug-bar-post-types.php:228
+#: ../class-debug-bar-post-types.php:234
 msgid "No post types found."
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:97
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:81
+msgid "unknown"
+msgstr ""
+
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:115
 msgid "undetermined"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:155
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:171
 msgid "I haven't got a clue what this is: "
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:221
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:254
 msgid "Properties:"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:222
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:258
 msgid "Methods:"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:229
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:266
 msgid "Object Properties:"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:232
-#: ../class-debug-bar-pretty-output.php:273
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:270
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:319
 msgid "Value"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:238
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:277
 msgid "Object Methods:"
 msgstr ""
 
-#: ../class-debug-bar-pretty-output.php:272
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:317
 msgid "Key"
+msgstr ""
+
+#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:435
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:454
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:471
+#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:489
+msgid "or even better: upgrade your Debug Bar plugins to their current version"
 msgstr ""

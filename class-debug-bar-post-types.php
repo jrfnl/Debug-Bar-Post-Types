@@ -6,14 +6,14 @@
  * @author		Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
  * @link		https://github.com/jrfnl/Debug-Bar-Post-Types
  * @since		1.0
- * @version		1.0.1
+ * @version		1.1
  *
  * @copyright	2013 Juliette Reinders Folmer
  * @license		http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  */
 
 // Avoid direct calls to this file
-if ( !function_exists( 'add_action' ) ) {
+if ( ! function_exists( 'add_action' ) ) {
 	header( 'Status: 403 Forbidden' );
 	header( 'HTTP/1.1 403 Forbidden' );
 	exit();
@@ -23,18 +23,14 @@ if ( !function_exists( 'add_action' ) ) {
 /**
  * The class in this file extends the functionality provided by the parent plugin "Debug Bar".
  */
-if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' ) ) {
+if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' ) ) {
 	class Debug_Bar_Post_Types extends Debug_Bar_Panel {
 
-		const DBPT_STYLES_VERSION = '1.0.1';
+		const DBPT_STYLES_VERSION = '1.1';
 
 		const DBPT_NAME = 'debug-bar-post-types';
 
 		public function init() {
-			if ( !class_exists( 'Debug_Bar_Pretty_Output' ) && class_exists( 'Debug_Bar_Panel' ) ) {
-				require_once 'class-debug-bar-pretty-output.php';
-			}
-
 			load_plugin_textdomain( self::DBPT_NAME, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 			$this->title( __( 'Post Types', self::DBPT_NAME ) );
@@ -63,6 +59,11 @@ if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' 
 			$count      = count( $wp_post_types );
 			$double     = ( $count > 4 ? true : false ); // whether to repeat the row labels on the other side of the table
 			
+			if ( ! class_exists( 'Debug_Bar_Pretty_Output' ) ) {
+				require_once plugin_dir_path( __FILE__ ) . 'inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php';
+			}
+
+
 			echo '
 		<h2><span>' . esc_html__( 'Total Post Types:', self::DBPT_NAME ) . '</span>' . esc_html( $count ) . '</h2>';
 
@@ -73,7 +74,7 @@ if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' 
 
 					if ( is_array( $props ) && count( $props ) > 0 ) {
 						foreach ( $props as $key => $value ) {
-							if ( !is_object( $value ) ) {
+							if ( ! is_object( $value ) ) {
 								$properties[$key][$name] = $value;
 							}
 							else if ( $key === 'cap' ) {
@@ -138,7 +139,13 @@ if ( !class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' 
 				<td>';
 
 							if ( isset( $value[$name] ) ) {
-								Debug_Bar_Pretty_Output::output( $value[$name], '', true, '', true, self::DBPT_NAME );
+								if ( defined( 'Debug_Bar_Pretty_Output::VERSION' ) ) {
+									echo Debug_Bar_Pretty_Output::get_output( $value[$name], '', true, '', true );
+								}
+								else {
+									// An old version of the pretty output class was loaded
+									Debug_Bar_Pretty_Output::output( $value[$name], '', true, '', true );
+								}
 							}
 							else {
 								echo '&nbsp;';
