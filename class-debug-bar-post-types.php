@@ -213,7 +213,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 							$alt = ( isset( $value[$name] ) ? __( 'Has capability', self::DBPT_NAME ) : __( 'Does not have capability', self::DBPT_NAME ) );
 
 							echo '
-				<td><img src="' . esc_url( plugins_url( 'images/badge-circle-' . $img . '-16.png', __FILE__ ) ) . '" width="16" height="16" alt="' . $alt . '" /></td>';
+				<td><img src="' . esc_url( plugins_url( 'images/badge-circle-' . $img . '-16.png', __FILE__ ) ) . '" width="16" height="16" alt="' . esc_attr( $alt ) . '" /></td>';
 							unset( $img, $alt );
 						}
 						unset( $name );

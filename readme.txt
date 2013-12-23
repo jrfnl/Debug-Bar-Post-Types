@@ -3,7 +3,7 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 3.8-beta1
+Tested up to: 3.8
 Stable tag: 1.1
 Depends: debug-bar
 License: GPLv2
@@ -29,7 +29,7 @@ If you like this plugin, please [rate and/or review](http://wordpress.org/suppor
 == Frequently Asked Questions ==
 
 = Can it be used on live site ? =
-This plugin is only meant to be used for development purposes, but shouldn't cause any issue if run on a production site.
+This plugin is only meant to be used for development purposes, but shouldn't cause any issues if run on a production site.
 
 
 = What are post types ? =
