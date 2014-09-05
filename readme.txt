@@ -3,9 +3,9 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 3.9
-Stable tag: 1.1
-Depends: debug-bar
+Tested up to: 4.0
+Stable tag: 1.1.1
+Depends: Debug Bar
 License: GPLv2
 
 Debug Bar Post Types adds a new panel to the Debug Bar with detailed information about registered post types. Requires "Debug Bar" plugin.
@@ -44,6 +44,10 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Changelog ==
+
+= 1.1.1 (2014-09-05) =
+* Fix compatibility with the [Plugin Dependencies](http://wordpress.org/plugins/plugin-dependencies/) plugin
+* Tested & found compatible WP 4.0
 
 = 1.1 (2013-12-02) =
 * Minor tidying up
