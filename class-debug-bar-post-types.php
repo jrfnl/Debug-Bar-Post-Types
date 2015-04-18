@@ -206,6 +206,8 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		/**
 		 * Create a property table for standard/custom properties
 		 *
+		 * @since 1.2
+		 *
 		 * @param array  $properties Array of post type properties
 		 * @param array  $names      Array of post type names
 		 * @param string $table_name Translated name for this table
@@ -293,6 +295,8 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 		/**
 		 * Create a capability table for standard/custom properties
+		 *
+		 * @since 1.2
 		 *
 		 * @param array  $caps   Array of post type capabilities
 		 * @param array  $names  Array of post type names
