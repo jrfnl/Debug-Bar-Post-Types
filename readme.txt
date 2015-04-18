@@ -3,8 +3,8 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 4.0
-Stable tag: 1.1.1
+Tested up to: 4.2
+Stable tag: 1.2
 Depends: Debug Bar
 License: GPLv2
 
@@ -45,6 +45,16 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
+= 1.2 (2015-04-18) =
+* Added a count of the registered Custom Post Types to the top of the page.
+* Split the display of Post Type properties. Standard post type properties are now shown first. Non-standard properties added by Custom Post Types are shown in a separate table.
+* Added a table showing the defined labels for Post Types.
+* Updated the pretty print class which now allows for limiting of the recursion depth when displaying the property values - props [Joy](https://wordpress.org/support/profile/joyously) for reporting issues with the Easy Post Types plugin. These should now be solved with this update.
+* Tested & found compatible WP 4.2
+* Minor tidying up
+* Updated language files
+* Updated screenshots
+
 = 1.1.1 (2014-09-05) =
 * Fix compatibility with the [Plugin Dependencies](http://wordpress.org/plugins/plugin-dependencies/) plugin
 * Tested & found compatible WP 4.0
@@ -58,6 +68,9 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Upgrade Notice ==
+
+= 1.2 =
+* Upgrade highly recommended - fix for fatal error in combination with Easy Post Types plugin.
 
 = 1.1 =
 * Upgrade highly recommended - multi-plugin compatibility issue
@@ -74,5 +87,8 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Screenshots ==
-1. Debug Bar Post Types Page
+1. Debug Bar Post Types - Standard Post Type Properties view
+1. Debug Bar Post Types - Custom Post Type Properties view
+1. Debug Bar Post Types - Capabilities view
+1. Debug Bar Post Types - Defined labels view
 
