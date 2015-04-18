@@ -1,110 +1,69 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Debug Bar Post Types - a WordPress Plugin\n"
-"POT-Creation-Date: 2013-12-02 07:17+0100\n"
-"PO-Revision-Date: 2013-12-02 07:18+0100\n"
-"Last-Translator: EJ Reinders Folmer <poedit_nospam@adviesenzo.nl>\n"
-"Language-Team: \n"
-"Language: Dutch\n"
+"POT-Creation-Date: 2015-04-18 15:04+0100\n"
+"PO-Revision-Date: 2015-04-18 15:05+0100\n"
+"Last-Translator: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
+"Language-Team: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-KeywordsList: __;esc_html__;esc_html_e;esc_attr__;esc_attr_e;_e\n"
 "X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../class-debug-bar-post-types.php:36
+#: class-debug-bar-post-types.php:72
 msgid "Post Types"
 msgstr "Post Types"
 
-#: ../class-debug-bar-post-types.php:68
+#: class-debug-bar-post-types.php:126
 msgid "Total Post Types:"
 msgstr "Totaal Post Types:"
 
-#: ../class-debug-bar-post-types.php:102 ../class-debug-bar-post-types.php:109
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:270
-msgid "Property"
-msgstr "Eigenschap"
+#: class-debug-bar-post-types.php:181
+msgid "Custom Post Types:"
+msgstr "Custom Post Types:"
 
-#: ../class-debug-bar-post-types.php:115
-msgid "Post Type Properties:"
-msgstr "Post Type Eigenschappen:"
+#: class-debug-bar-post-types.php:190
+msgid "Standard Post Type Properties:"
+msgstr "Standaard Post Type Eigenschappen:"
 
-#: ../class-debug-bar-post-types.php:177 ../class-debug-bar-post-types.php:184
-msgid "Capability"
-msgstr "Capaciteit"
+#: class-debug-bar-post-types.php:200
+msgid "Custom Post Type Properties:"
+msgstr "Extra Post Type Eigenschappen:"
 
-#: ../class-debug-bar-post-types.php:189
-msgid "Post Type Capabilities:"
-msgstr "Post Type Capaciteiten:"
+#: class-debug-bar-post-types.php:219
+msgid "Defined Labels:"
+msgstr "Gedefinieerd Labels:"
 
-#: ../class-debug-bar-post-types.php:213
-msgid "Has capability"
-msgstr "Heeft capaciteit"
-
-#: ../class-debug-bar-post-types.php:213
-msgid "Does not have capability"
-msgstr "Heeft capaciteit niet"
-
-#: ../class-debug-bar-post-types.php:234
+#: class-debug-bar-post-types.php:225
 msgid "No post types found."
 msgstr "Geen post-types gevonden."
 
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:81
-msgid "unknown"
-msgstr ""
+#: class-debug-bar-post-types.php:250 class-debug-bar-post-types.php:258
+msgid "Property"
+msgstr "Eigenschap"
 
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:115
-msgid "undetermined"
-msgstr ""
+#: class-debug-bar-post-types.php:336 class-debug-bar-post-types.php:344
+msgid "Capability"
+msgstr "Capaciteit"
 
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:171
-msgid "I haven't got a clue what this is: "
-msgstr ""
+#: class-debug-bar-post-types.php:351
+msgid "Post Type Capabilities:"
+msgstr "Post Type Capaciteiten:"
 
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:254
-msgid "Properties:"
-msgstr ""
+#: class-debug-bar-post-types.php:375
+msgid "Has capability"
+msgstr "Heeft capaciteit"
 
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:258
-msgid "Methods:"
-msgstr ""
-
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:266
-msgid "Object Properties:"
-msgstr ""
-
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:270
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:319
-msgid "Value"
-msgstr ""
-
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:277
-msgid "Object Methods:"
-msgstr ""
-
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:317
-msgid "Key"
-msgstr ""
-
-#. TRANSLATORS: no need to translate, unless you are translating the Debug Bar Pretty Output Helper
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:435
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:454
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:471
-#: ../inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php:489
-msgid "or even better: upgrade your Debug Bar plugins to their current version"
-msgstr ""
+#: class-debug-bar-post-types.php:375
+msgid "Does not have capability"
+msgstr "Heeft capaciteit niet"
 
 #~ msgid "WP Screen"
 #~ msgstr "WP Screen"
