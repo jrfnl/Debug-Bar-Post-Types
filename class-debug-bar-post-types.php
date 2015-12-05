@@ -118,7 +118,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 										if ( $key === 'cap' ) {
 											$caps[ $v ][ $name ] = $v;
 										}
-										elseif ( $key === 'labels' ) {
+										else if ( $key === 'labels' ) {
 											$labels[ $k ][ $name ] = $v;
 										}
 									}
@@ -368,7 +368,5 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		</table>
 ';
 		}
-
 	} // End of class Debug_Bar_Post_Types
-
 } // End of if class_exists wrapper
