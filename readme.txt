@@ -3,8 +3,8 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 4.2
-Stable tag: 1.2
+Tested up to: 4.4
+Stable tag: 1.2.1
 Depends: Debug Bar
 License: GPLv2
 
@@ -44,6 +44,10 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Changelog ==
+
+= 1.2.1 (2015-12-05) =
+* Updated pretty print class & minor tidying up.
+* Tested & found compatible WP 4.4
 
 = 1.2 (2015-04-18) =
 * Added a count of the registered Custom Post Types to the top of the page.
