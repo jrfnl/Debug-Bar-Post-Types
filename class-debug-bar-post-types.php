@@ -1,6 +1,6 @@
 <?php
 /**
- * Debug Bar Post Types, a WordPress plugin
+ * Debug Bar Post Types, a WordPress plugin.
  *
  * @package     WordPress\Plugins\Debug Bar Post Types
  * @author      Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
@@ -12,7 +12,7 @@
  * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  */
 
-// Avoid direct calls to this file
+// Avoid direct calls to this file.
 if ( ! function_exists( 'add_action' ) ) {
 	header( 'Status: 403 Forbidden' );
 	header( 'HTTP/1.1 403 Forbidden' );
@@ -21,6 +21,7 @@ if ( ! function_exists( 'add_action' ) ) {
 
 
 if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel' ) ) {
+
 	/**
 	 * This class extends the functionality provided by the parent plugin "Debug Bar" by adding a
 	 * panel showing information about the defined WP Post Types.
@@ -33,7 +34,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
-		 * Constructor
+		 * Constructor.
 		 */
 		public function init() {
 			load_plugin_textdomain( self::DBPT_NAME, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -46,7 +47,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
-		 * Enqueue css file
+		 * Enqueue css file.
 		 */
 		public function enqueue_scripts() {
 			$suffix = ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min' );
@@ -65,7 +66,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
-		 * Render the tab content
+		 * Render the tab content.
 		 */
 		public function render() {
 
@@ -79,13 +80,13 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			$caps        = array();
 			$count       = count( $wp_post_types );
 			$count_cpt   = 0;
-			$double      = ( ( $count > 4 ) ? true : false ); // whether to repeat the row labels on the other side of the table
+			$double      = ( ( $count > 4 ) ? true : false ); // Whether to repeat the row labels on the other side of the table.
 
 			if ( ! class_exists( 'Debug_Bar_Pretty_Output' ) ) {
 				require_once plugin_dir_path( __FILE__ ) . 'inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php';
 			}
 
-			// Limit recursion depth if possible - method available since DBPO v1.4
+			// Limit recursion depth if possible - method available since DBPO v1.4.
 			if ( method_exists( 'Debug_Bar_Pretty_Output', 'limit_recursion' ) ) {
 				Debug_Bar_Pretty_Output::limit_recursion( 2 );
 			}
@@ -98,14 +99,14 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			if ( is_array( $wp_post_types ) && $count > 0 ) {
 
 				/**
-				 * Put the relevant info in arrays
+				 * Put the relevant info in arrays.
 				 */
 				foreach ( $wp_post_types as $name => $post_type_obj ) {
 					$props = get_object_vars( $post_type_obj );
 
 					if ( is_array( $props ) && $props !== array() ) {
 						foreach ( $props as $key => $value ) {
-							// Add to list of custom post_types
+							// Add to list of custom post_types.
 							if ( $key === '_builtin' && $value !== true ) {
 								$custom_pt[] = $name;
 							}
@@ -127,11 +128,11 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 								unset( $object_vars );
 							}
 							else {
-								// Standard properties
+								// Standard properties.
 								if ( property_exists( $wp_post_types['post'], $key ) ) {
 									$properties[ $key ][ $name ] = $value;
 								}
-								// Custom properties
+								// Custom properties.
 								else {
 									$custom_prop[ $key ][ $name ] = $value;
 								}
@@ -151,7 +152,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				}
 
 
-				/* Create the properties table for the standard properties */
+				/* Create the properties table for the standard properties. */
 				if ( count( $properties ) > 0 ) {
 					$this->render_property_table(
 						$properties,
@@ -161,7 +162,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 					);
 				}
 
-				/* Create the properties table for the custom properties */
+				/* Create the properties table for the custom properties. */
 				if ( count( $custom_prop ) > 0 ) {
 					$this->render_property_table(
 						$custom_prop,
@@ -171,7 +172,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 					);
 				}
 
-				/* Create the capabilities table */
+				/* Create the capabilities table. */
 				if ( count( $caps ) > 0 ) {
 					$this->render_capability_table(
 						$caps,
@@ -180,7 +181,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 					);
 				}
 
-				/* Create the table for the defined labels */
+				/* Create the table for the defined labels. */
 				if ( count( $labels ) > 0 ) {
 					$this->render_property_table(
 						$labels,
@@ -196,7 +197,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 			unset( $names, $properties, $caps );
 
-			// Unset recursion depth limit if possible - method available since DBPO v1.4
+			// Unset recursion depth limit if possible - method available since DBPO v1.4.
 			if ( method_exists( 'Debug_Bar_Pretty_Output', 'unset_recursion_limit' ) ) {
 				Debug_Bar_Pretty_Output::unset_recursion_limit();
 			}
@@ -204,18 +205,18 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
-		 * Create a property table for standard/custom properties
+		 * Create a property table for standard/custom properties.
 		 *
 		 * @since 1.2
 		 *
-		 * @param array  $properties Array of post type properties
-		 * @param array  $names      Array of post type names
-		 * @param string $table_name Translated name for this table
-		 * @param bool   $double     Whether or not to repeat the row labels at the end of the table
+		 * @param array  $properties Array of post type properties.
+		 * @param array  $names      Array of post type names.
+		 * @param string $table_name Translated name for this table.
+		 * @param bool   $double     Whether or not to repeat the row labels at the end of the table.
 		 */
 		protected function render_property_table( $properties, $names, $table_name, $double ) {
 
-			/* Create header row */
+			/* Create header row. */
 			$header_row = '
 		<tr>
 			<th>' . esc_html__( 'Property', self::DBPT_NAME ) . '</th>';
@@ -232,7 +233,8 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		</tr>';
 
 
-			echo '
+			echo // WPCS: XSS ok.
+			'
 		<h3>', esc_html( $table_name ), '</h3>
 		<table class="debug-bar-table ', self::DBPT_NAME, '">
 			<thead>
@@ -245,11 +247,11 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			unset( $header_row );
 
 
-			/* Sort */
+			/* Sort. */
 			uksort( $properties, 'strnatcasecmp' );
 
 
-			/* Output */
+			/* Output. */
 			foreach ( $properties as $key => $value ) {
 				echo '
 			<tr>
@@ -261,10 +263,10 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 					if ( isset( $value[ $name ] ) ) {
 						if ( defined( 'Debug_Bar_Pretty_Output::VERSION' ) ) {
-							echo Debug_Bar_Pretty_Output::get_output( $value[ $name ], '', true, '', true ); // xss: ok
+							echo Debug_Bar_Pretty_Output::get_output( $value[ $name ], '', true, '', true ); // WPCS: XSS ok.
 						}
 						else {
-							// An old version of the pretty output class was loaded
+							// An old version of the pretty output class was loaded.
 							Debug_Bar_Pretty_Output::output( $value[ $name ], '', true, '', true );
 						}
 					}
@@ -278,8 +280,9 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				unset( $name );
 
 				if ( $double === true ) {
-					echo '
-				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // xss: ok
+					echo // WPCS: XSS ok.
+					'
+				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // WPCS: XSS ok.
 				}
 
 				echo '
@@ -294,16 +297,16 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		}
 
 		/**
-		 * Create a capability table for standard/custom properties
+		 * Create a capability table for standard/custom properties.
 		 *
 		 * @since 1.2
 		 *
-		 * @param array  $caps   Array of post type capabilities
-		 * @param array  $names  Array of post type names
-		 * @param bool   $double Whether or not to repeat the row labels at the end of the table
+		 * @param array $caps   Array of post type capabilities.
+		 * @param array $names  Array of post type names.
+		 * @param bool  $double Whether or not to repeat the row labels at the end of the table.
 		 */
 		protected function render_capability_table( $caps, $names, $double ) {
-			/* Create header row */
+			/* Create header row. */
 			$header_row = '
 			<tr>
 				<th>' . esc_html__( 'Capability', self::DBPT_NAME ) . '</th>';
@@ -320,7 +323,8 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			</tr>';
 
 
-			echo '
+			echo // WPCS: XSS ok.
+			'
 		<h3>', esc_html__( 'Post Type Capabilities:', self::DBPT_NAME ), '</h3>
 		<table class="debug-bar-table ', self::DBPT_NAME, ' ', self::DBPT_NAME, '-caps">
 			<thead>
@@ -333,11 +337,11 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			unset( $header_row );
 
 
-			/* Sort */
+			/* Sort. */
 			uksort( $caps, 'strnatcasecmp' );
 
 
-			/* Output */
+			/* Output. */
 			foreach ( $caps as $key => $value ) {
 				echo '
 			<tr>
@@ -345,7 +349,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 				foreach ( $names as $name ) {
 					$img = ( ( isset( $value[ $name ] ) ) ? 'check' : 'cross' );
-					$alt = ( ( isset( $value[ $name ] ) ) ? __( 'Has capability', self::DBPT_NAME ) : __( 'Does not have capability', self::DBPT_NAME ) );
+					$alt = ( ( isset( $value[ $name ] ) ) ? esc_html__( 'Has capability', self::DBPT_NAME ) : esc_html__( 'Does not have capability', self::DBPT_NAME ) );
 
 					echo '
 				<td><img src="', esc_url( plugins_url( 'images/badge-circle-' . $img . '-16.png', __FILE__ ) ), '" width="16" height="16" alt="', esc_attr( $alt ), '" /></td>';
@@ -354,8 +358,9 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				unset( $name );
 
 				if ( $double === true ) {
-					echo '
-				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // xss: ok
+					echo // WPCS: XSS ok.
+					'
+				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>';
 				}
 
 				echo '
@@ -368,5 +373,6 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		</table>
 ';
 		}
-	} // End of class Debug_Bar_Post_Types
-} // End of if class_exists wrapper
+	} // End of class Debug_Bar_Post_Types.
+
+} // End of if class_exists wrapper.
