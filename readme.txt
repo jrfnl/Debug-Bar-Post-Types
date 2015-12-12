@@ -45,6 +45,9 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
+= Trunk =
+* Minor tidying up.
+
 = 1.2.1 (2015-12-05) =
 * Updated pretty print class & minor tidying up.
 * Tested & found compatible WP 4.4

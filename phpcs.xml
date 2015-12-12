@@ -2,9 +2,6 @@
 <ruleset name="Debug Bar Post Types">
 	<description>The code standard for Debug Bar Post Types is WordPress.</description>
 
-	<!-- Exclude the codesniffer itself from checks. -->
-	<exclude-pattern>phpcs/*</exclude-pattern>
-	<exclude-pattern>wpcs/*</exclude-pattern>
 	<exclude-pattern>*/inc/debug-bar-pretty-output/*</exclude-pattern>
 
 	<rule ref="WordPress">
