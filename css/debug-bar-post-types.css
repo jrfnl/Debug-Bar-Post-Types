@@ -5,6 +5,9 @@
 	margin-top: 1.2em;
 	clear: both;
 }
+#debug-menu-target-Debug_Bar_Post_Types table {
+	table-layout: auto;
+}
 #debug-menu-target-Debug_Bar_Post_Types table.debug-bar-post-types {
 	width: 100%;
 	border-collapse: collapse;
