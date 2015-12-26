@@ -6,7 +6,7 @@
  * @author      Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
  * @link        https://github.com/jrfnl/Debug-Bar-Post-Types
  * @since       1.0
- * @version     1.2.1
+ * @version     1.2.2
  *
  * @copyright   2013-2015 Juliette Reinders Folmer
  * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
@@ -28,7 +28,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 	 */
 	class Debug_Bar_Post_Types extends Debug_Bar_Panel {
 
-		const DBPT_STYLES_VERSION = '1.1';
+		const DBPT_STYLES_VERSION = '1.2.2';
 
 		const DBPT_NAME = 'debug-bar-post-types';
 
