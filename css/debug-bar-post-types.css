@@ -5,6 +5,12 @@
 	margin-top: 1.2em;
 	clear: both;
 }
+
+#debug-menu-target-Debug_Bar_Post_Types table,
+#debug-menu-target-Debug_Bar_Post_Types th,
+#debug-menu-target-Debug_Bar_Post_Types td {
+	border: 0px none;
+}
 #debug-menu-target-Debug_Bar_Post_Types table {
 	table-layout: auto;
 }
