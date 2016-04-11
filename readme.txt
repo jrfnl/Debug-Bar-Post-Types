@@ -48,7 +48,7 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 = 1.2.3 (2015-04-12) =
 * Hard-coded the text-domain for better compatibility with [GlotPress](https://translate.wordpress.org/projects/wp-plugins/debug-bar-post-types).
 * Fix very minor layout inconsistency in combination with Twenty-Sixteen theme.
-* Updated the pretty print class to v1.5.2.
+* Updated the pretty print class to v1.6.0.
 * Minor housekeeping.
 
 = 1.2.2 (2015-12-26) =
