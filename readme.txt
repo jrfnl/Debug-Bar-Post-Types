@@ -3,8 +3,8 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 4.4
-Stable tag: 1.2.2
+Tested up to: 4.5
+Stable tag: 1.2.3
 Depends: Debug Bar
 License: GPLv2
 
@@ -44,6 +44,12 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Changelog ==
+
+= 1.2.3 (2015-04-12) =
+* Hard-coded the text-domain for better compatibility with [GlotPress](https://translate.wordpress.org/projects/wp-plugins/debug-bar-post-types).
+* Fix very minor layout inconsistency in combination with Twenty-Sixteen theme.
+* Updated the pretty print class to v1.5.2.
+* Minor housekeeping.
 
 = 1.2.2 (2015-12-26) =
 * Fix weird table layout on front-end in combination with Twenty-Sixteen theme.
