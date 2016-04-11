@@ -104,22 +104,22 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				foreach ( $wp_post_types as $name => $post_type_obj ) {
 					$props = get_object_vars( $post_type_obj );
 
-					if ( is_array( $props ) && $props !== array() ) {
+					if ( ! empty( $props ) && is_array( $props ) ) {
 						foreach ( $props as $key => $value ) {
 							// Add to list of custom post_types.
-							if ( $key === '_builtin' && $value !== true ) {
+							if ( '_builtin' === $key && true !== $value ) {
 								$custom_pt[] = $name;
 							}
 
 							if ( is_object( $value ) && in_array( $key, array( 'cap', 'labels' ), true ) ) {
 								$object_vars = get_object_vars( $value );
 
-								if ( is_array( $object_vars ) && $object_vars !== array() ) {
+								if ( ! empty( $object_vars ) && is_array( $object_vars ) ) {
 									foreach ( $object_vars as $k => $v ) {
-										if ( $key === 'cap' ) {
+										if ( 'cap' === $key ) {
 											$caps[ $v ][ $name ] = $v;
 										}
-										else if ( $key === 'labels' ) {
+										elseif ( 'labels' === $key ) {
 											$labels[ $k ][ $name ] = $v;
 										}
 									}
@@ -145,7 +145,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				unset( $name, $post_type_obj );
 
 
-				if ( $custom_pt !== array() ) {
+				if ( ! empty( $custom_pt ) ) {
 					$count_cpt = count( $custom_pt );
 					echo '
 		<h2><span>', esc_html__( 'Custom Post Types:', 'debug-bar-post-types' ), '</span>', absint( $count_cpt ), '</h2>';
@@ -225,7 +225,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			<th>' . esc_html( $name ) . '</th>';
 			}
 			unset( $name );
-			if ( $double === true ) {
+			if ( true === $double ) {
 				$header_row .= '
 			<th class="' . self::DBPT_NAME . '-table-end">' . esc_html__( 'Property', 'debug-bar-post-types' ) . '</th>';
 			}
@@ -279,7 +279,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				}
 				unset( $name );
 
-				if ( $double === true ) {
+				if ( true === $double ) {
 					echo // WPCS: XSS ok.
 					'
 				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // WPCS: XSS ok.
@@ -315,7 +315,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				<th>' . esc_html( $name ) . '</th>';
 			}
 			unset( $name );
-			if ( $double === true ) {
+			if ( true === $double ) {
 				$header_row .= '
 				<th>' . esc_html__( 'Capability', 'debug-bar-post-types' ) . '</th>';
 			}
@@ -357,7 +357,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				}
 				unset( $name );
 
-				if ( $double === true ) {
+				if ( true === $double ) {
 					echo // WPCS: XSS ok.
 					'
 				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>';
