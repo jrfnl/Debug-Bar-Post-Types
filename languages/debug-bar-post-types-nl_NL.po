@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Debug Bar Post Types - a WordPress Plugin\n"
-"POT-Creation-Date: 2016-04-12 02:53+0200\n"
-"PO-Revision-Date: 2016-04-12 02:53+0200\n"
+"POT-Creation-Date: 2016-04-12 04:17+0200\n"
+"PO-Revision-Date: 2016-04-12 04:17+0200\n"
 "Last-Translator: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language-Team: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language: nl_NL\n"
@@ -70,8 +70,8 @@ msgid "Debug Bar Post Types"
 msgstr "Debug Bar Post Types"
 
 #. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/extend/plugins/debug-bar-post-types/"
-msgstr "http://wordpress.org/extend/plugins/debug-bar-post-types/"
+msgid "https://wordpress.org/plugins/debug-bar-post-types/"
+msgstr "https://wordpress.org/plugins/debug-bar-post-types/"
 
 #. Description of the plugin/theme
 msgid ""

@@ -12,7 +12,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Debug Bar Post Types
- * Plugin URI:  http://wordpress.org/extend/plugins/debug-bar-post-types/
+ * Plugin URI:  https://wordpress.org/plugins/debug-bar-post-types/
  * Description: Debug Bar Post Types adds a new panel to the Debug Bar that displays detailed information about the registered post types for your site. Requires "Debug Bar" plugin.
  * Version:     1.3.0
  * Author:      Juliette Reinders Folmer
