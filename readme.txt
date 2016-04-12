@@ -3,8 +3,8 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.1
-Tested up to: 4.4
-Stable tag: 1.2.2
+Tested up to: 4.5
+Stable tag: 1.3.0
 Depends: Debug Bar
 License: GPLv2
 
@@ -45,27 +45,35 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
+= 1.3.0 (2016-04-12) =
+* Hard-coded the text-domain for better compatibility with [GlotPress](https://translate.wordpress.org/projects/wp-plugins/debug-bar-post-types).
+* Make loading of text-domain compatible with use of the plugin in the `must-use` plugins directory.
+* Fix very minor layout inconsistency in combination with Twenty-Sixteen theme.
+* Updated the pretty print class to v1.6.0.
+* Minor housekeeping.
+* Tested & found compatible with WP 4.5
+
 = 1.2.2 (2015-12-26) =
 * Fix weird table layout on front-end in combination with Twenty-Sixteen theme.
 * Minor tidying up.
 
 = 1.2.1 (2015-12-05) =
 * Updated pretty print class & minor tidying up.
-* Tested & found compatible WP 4.4
+* Tested & found compatible with WP 4.4
 
 = 1.2 (2015-04-18) =
 * Added a count of the registered Custom Post Types to the top of the page.
 * Split the display of Post Type properties. Standard post type properties are now shown first. Non-standard properties added by Custom Post Types are shown in a separate table.
 * Added a table showing the defined labels for Post Types.
 * Updated the pretty print class which now allows for limiting of the recursion depth when displaying the property values - props [Joy](https://wordpress.org/support/profile/joyously) for reporting issues with the Easy Post Types plugin. These should now be solved with this update.
-* Tested & found compatible WP 4.2
+* Tested & found compatible with WP 4.2
 * Minor tidying up
 * Updated language files
 * Updated screenshots
 
 = 1.1.1 (2014-09-05) =
 * Fix compatibility with the [Plugin Dependencies](http://wordpress.org/plugins/plugin-dependencies/) plugin
-* Tested & found compatible WP 4.0
+* Tested & found compatible with WP 4.0
 
 = 1.1 (2013-12-02) =
 * Minor tidying up

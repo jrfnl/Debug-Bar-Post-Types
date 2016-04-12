@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Debug Bar Post Types - a WordPress Plugin\n"
-"POT-Creation-Date: 2015-12-07 04:23+0100\n"
-"PO-Revision-Date: 2015-12-07 04:24+0100\n"
+"POT-Creation-Date: 2016-04-12 02:53+0200\n"
+"PO-Revision-Date: 2016-04-12 02:53+0200\n"
 "Last-Translator: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language-Team: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-KeywordsList: __;esc_html__;esc_html_e;esc_attr__;esc_attr_e;_e\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -17,51 +17,51 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: class-debug-bar-post-types.php:42
+#: class-debug-bar-post-types.php:41
 msgid "Post Types"
 msgstr "Post Types"
 
-#: class-debug-bar-post-types.php:96
+#: class-debug-bar-post-types.php:116
 msgid "Total Post Types:"
 msgstr "Totaal Post Types:"
 
-#: class-debug-bar-post-types.php:151
+#: class-debug-bar-post-types.php:171
 msgid "Custom Post Types:"
 msgstr "Custom Post Types:"
 
-#: class-debug-bar-post-types.php:160
+#: class-debug-bar-post-types.php:180
 msgid "Standard Post Type Properties:"
 msgstr "Standaard Post Type Eigenschappen:"
 
-#: class-debug-bar-post-types.php:170
+#: class-debug-bar-post-types.php:190
 msgid "Custom Post Type Properties:"
 msgstr "Extra Post Type Eigenschappen:"
 
-#: class-debug-bar-post-types.php:189
+#: class-debug-bar-post-types.php:209
 msgid "Defined Labels:"
 msgstr "Gedefinieerd Labels:"
 
-#: class-debug-bar-post-types.php:195
+#: class-debug-bar-post-types.php:215
 msgid "No post types found."
 msgstr "Geen post-types gevonden."
 
-#: class-debug-bar-post-types.php:222 class-debug-bar-post-types.php:230
+#: class-debug-bar-post-types.php:242 class-debug-bar-post-types.php:250
 msgid "Property"
 msgstr "Eigenschap"
 
-#: class-debug-bar-post-types.php:312 class-debug-bar-post-types.php:320
+#: class-debug-bar-post-types.php:332 class-debug-bar-post-types.php:340
 msgid "Capability"
 msgstr "Capaciteit"
 
-#: class-debug-bar-post-types.php:328
+#: class-debug-bar-post-types.php:348
 msgid "Post Type Capabilities:"
 msgstr "Post Type Capaciteiten:"
 
-#: class-debug-bar-post-types.php:352
+#: class-debug-bar-post-types.php:372
 msgid "Has capability"
 msgstr "Heeft capaciteit"
 
-#: class-debug-bar-post-types.php:352
+#: class-debug-bar-post-types.php:372
 msgid "Does not have capability"
 msgstr "Heeft capaciteit niet"
 

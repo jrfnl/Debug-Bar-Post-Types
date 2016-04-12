@@ -5,22 +5,22 @@
  * @package     WordPress\Plugins\Debug Bar Post Types
  * @author      Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
  * @link        https://github.com/jrfnl/Debug-Bar-Post-Types
- * @version     1.2.2
+ * @version     1.3.0
  *
- * @copyright   2013-2014 Juliette Reinders Folmer
+ * @copyright   2013-2016 Juliette Reinders Folmer
  * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  *
  * @wordpress-plugin
  * Plugin Name: Debug Bar Post Types
  * Plugin URI:  http://wordpress.org/extend/plugins/debug-bar-post-types/
  * Description: Debug Bar Post Types adds a new panel to the Debug Bar that displays detailed information about the registered post types for your site. Requires "Debug Bar" plugin.
- * Version:     1.2.2
+ * Version:     1.3.0
  * Author:      Juliette Reinders Folmer
  * Author URI:  http://www.adviesenzo.nl/
  * Depends:     Debug Bar
  * Text Domain: debug-bar-post-types
- * Domain Path: /languages/
- * Copyright:   2013-2014 Juliette Reinders Folmer
+ * Domain Path: /languages
+ * Copyright:   2013-2016 Juliette Reinders Folmer
  */
 
 // Avoid direct calls to this file.

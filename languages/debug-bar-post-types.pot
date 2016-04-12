@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Debug Bar Post Types\n"
-"POT-Creation-Date: 2015-12-07 04:23+0100\n"
+"POT-Creation-Date: 2016-04-12 02:52+0200\n"
 "PO-Revision-Date: 2015-12-07 04:22+0100\n"
 "Last-Translator: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language-Team: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: debug-bar-post-types.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -21,51 +21,51 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: inc\n"
 
-#: class-debug-bar-post-types.php:42
+#: class-debug-bar-post-types.php:41
 msgid "Post Types"
 msgstr ""
 
-#: class-debug-bar-post-types.php:96
+#: class-debug-bar-post-types.php:116
 msgid "Total Post Types:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:151
+#: class-debug-bar-post-types.php:171
 msgid "Custom Post Types:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:160
+#: class-debug-bar-post-types.php:180
 msgid "Standard Post Type Properties:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:170
+#: class-debug-bar-post-types.php:190
 msgid "Custom Post Type Properties:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:189
+#: class-debug-bar-post-types.php:209
 msgid "Defined Labels:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:195
+#: class-debug-bar-post-types.php:215
 msgid "No post types found."
 msgstr ""
 
-#: class-debug-bar-post-types.php:222 class-debug-bar-post-types.php:230
+#: class-debug-bar-post-types.php:242 class-debug-bar-post-types.php:250
 msgid "Property"
 msgstr ""
 
-#: class-debug-bar-post-types.php:312 class-debug-bar-post-types.php:320
+#: class-debug-bar-post-types.php:332 class-debug-bar-post-types.php:340
 msgid "Capability"
 msgstr ""
 
-#: class-debug-bar-post-types.php:328
+#: class-debug-bar-post-types.php:348
 msgid "Post Type Capabilities:"
 msgstr ""
 
-#: class-debug-bar-post-types.php:352
+#: class-debug-bar-post-types.php:372
 msgid "Has capability"
 msgstr ""
 
-#: class-debug-bar-post-types.php:352
+#: class-debug-bar-post-types.php:372
 msgid "Does not have capability"
 msgstr ""
 
