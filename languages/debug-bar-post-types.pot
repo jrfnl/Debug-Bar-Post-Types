@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Debug Bar Post Types\n"
-"POT-Creation-Date: 2016-04-12 02:52+0200\n"
+"POT-Creation-Date: 2016-04-12 04:17+0200\n"
 "PO-Revision-Date: 2015-12-07 04:22+0100\n"
 "Last-Translator: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
 "Language-Team: Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>\n"
@@ -74,7 +74,7 @@ msgid "Debug Bar Post Types"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/extend/plugins/debug-bar-post-types/"
+msgid "https://wordpress.org/plugins/debug-bar-post-types/"
 msgstr ""
 
 #. Description of the plugin/theme
