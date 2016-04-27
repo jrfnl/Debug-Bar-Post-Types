@@ -45,6 +45,9 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
+= Trunk =
+* Some code refactoring.
+
 = 1.3.0 (2016-04-12) =
 * Hard-coded the text-domain for better compatibility with [GlotPress](https://translate.wordpress.org/projects/wp-plugins/debug-bar-post-types).
 * Make loading of text-domain compatible with use of the plugin in the `must-use` plugins directory.

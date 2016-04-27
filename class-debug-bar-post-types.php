@@ -34,6 +34,63 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
+		 * Post Type names - used as column labels.
+		 *
+		 * @var array
+		 */
+		private $names = array();
+
+		/**
+		 * Custom Post Types, i.e. post types which are not by default included in WP.
+		 *
+		 * @var array
+		 */
+		private $custom_pt = array();
+
+		/**
+		 * Standard post type properties.
+		 *
+		 * @var array
+		 */
+		private $properties = array();
+
+		/**
+		 * Non-standard post type properties.
+		 *
+		 * @var array
+		 */
+		private $custom_prop = array();
+
+		/**
+		 * Post Type labels.
+		 *
+		 * @var array
+		 */
+		private $labels = array();
+
+		/**
+		 * Post Type capabilities.
+		 *
+		 * @var array
+		 */
+		private $caps = array();
+
+		/**
+		 * Number of non-standard post types registered.
+		 *
+		 * @var int
+		 */
+		private $count_cpt = 0;
+
+		/**
+		 * Whether to repeat the row labels on the other side of the table.
+		 *
+		 * @var bool
+		 */
+		private $double = false;
+
+
+		/**
 		 * Constructor.
 		 */
 		public function init() {
@@ -91,16 +148,9 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		public function render() {
 
 			$wp_post_types = $GLOBALS['wp_post_types'];
-			$names         = array_keys( $wp_post_types );
-			$custom_pt     = array();
-
-			$properties  = array();
-			$custom_prop = array();
-			$labels      = array();
-			$caps        = array();
-			$count       = count( $wp_post_types );
-			$count_cpt   = 0;
-			$double      = ( ( $count > 4 ) ? true : false ); // Whether to repeat the row labels on the other side of the table.
+			$this->names   = array_keys( $wp_post_types );
+			$count         = count( $wp_post_types );
+			$this->double  = ( ( $count > 4 ) ? true : false ); // Whether to repeat the row labels on the other side of the table.
 
 			if ( ! class_exists( 'Debug_Bar_Pretty_Output' ) ) {
 				require_once plugin_dir_path( __FILE__ ) . 'inc/debug-bar-pretty-output/class-debug-bar-pretty-output.php';
@@ -115,101 +165,20 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			echo '
 		<h2><span>', esc_html__( 'Total Post Types:', 'debug-bar-post-types' ), '</span>', absint( $count ), '</h2>';
 
-
 			if ( is_array( $wp_post_types ) && $count > 0 ) {
 
-				/**
-				 * Put the relevant info in arrays.
-				 */
-				foreach ( $wp_post_types as $name => $post_type_obj ) {
-					$props = get_object_vars( $post_type_obj );
+				$this->collect_info( $wp_post_types );
 
-					if ( ! empty( $props ) && is_array( $props ) ) {
-						foreach ( $props as $key => $value ) {
-							// Add to list of custom post_types.
-							if ( '_builtin' === $key && true !== $value ) {
-								$custom_pt[] = $name;
-							}
-
-							if ( is_object( $value ) && in_array( $key, array( 'cap', 'labels' ), true ) ) {
-								$object_vars = get_object_vars( $value );
-
-								if ( ! empty( $object_vars ) && is_array( $object_vars ) ) {
-									foreach ( $object_vars as $k => $v ) {
-										if ( 'cap' === $key ) {
-											$caps[ $v ][ $name ] = $v;
-										}
-										elseif ( 'labels' === $key ) {
-											$labels[ $k ][ $name ] = $v;
-										}
-									}
-									unset( $k, $v );
-								}
-								unset( $object_vars );
-							}
-							else {
-								// Standard properties.
-								if ( property_exists( $wp_post_types['post'], $key ) ) {
-									$properties[ $key ][ $name ] = $value;
-								}
-								// Custom properties.
-								else {
-									$custom_prop[ $key ][ $name ] = $value;
-								}
-							}
-						}
-						unset( $key, $value );
-					}
-					unset( $props );
-				}
-				unset( $name, $post_type_obj );
-
-
-				if ( ! empty( $custom_pt ) ) {
-					$count_cpt = count( $custom_pt );
+				if ( ! empty( $this->custom_pt ) ) {
+					$this->count_cpt = count( $this->custom_pt );
 					echo '
-		<h2><span>', esc_html__( 'Custom Post Types:', 'debug-bar-post-types' ), '</span>', absint( $count_cpt ), '</h2>';
+		<h2><span>', esc_html__( 'Custom Post Types:', 'debug-bar-post-types' ), '</span>', absint( $this->count_cpt ), '</h2>';
 				}
 
-
-				/* Create the properties table for the standard properties. */
-				if ( count( $properties ) > 0 ) {
-					$this->render_property_table(
-						$properties,
-						$names,
-						__( 'Standard Post Type Properties:', 'debug-bar-post-types' ),
-						$double
-					);
-				}
-
-				/* Create the properties table for the custom properties. */
-				if ( count( $custom_prop ) > 0 ) {
-					$this->render_property_table(
-						$custom_prop,
-						$custom_pt,
-						__( 'Custom Post Type Properties:', 'debug-bar-post-types' ),
-						( ( $count_cpt > 4 ) ? true : false )
-					);
-				}
-
-				/* Create the capabilities table. */
-				if ( count( $caps ) > 0 ) {
-					$this->render_capability_table(
-						$caps,
-						$names,
-						$double
-					);
-				}
-
-				/* Create the table for the defined labels. */
-				if ( count( $labels ) > 0 ) {
-					$this->render_property_table(
-						$labels,
-						$names,
-						__( 'Defined Labels:', 'debug-bar-post-types' ),
-						$double
-					);
-				}
+				$this->render_standard_properties_table();
+				$this->render_custom_properties_table();
+				$this->render_capabilities_table();
+				$this->render_labels_table();
 			}
 			else {
 				echo '<p>', esc_html__( 'No post types found.', 'debug-bar-post-types' ), '</p>';
@@ -220,6 +189,127 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			// Unset recursion depth limit if possible - method available since DBPO v1.4.
 			if ( method_exists( 'Debug_Bar_Pretty_Output', 'unset_recursion_limit' ) ) {
 				Debug_Bar_Pretty_Output::unset_recursion_limit();
+			}
+		}
+
+
+		/**
+		 * Collect the necessary information from the $post_types array.
+		 *
+		 * @param array $post_types Registered post types.
+		 */
+		private function collect_info( $post_types ) {
+			foreach ( $post_types as $name => $tax_obj ) {
+				$props = get_object_vars( $tax_obj );
+
+				if ( ! empty( $props ) && is_array( $props ) ) {
+					foreach ( $props as $key => $value ) {
+						// Add to list of custom post_types.
+						if ( '_builtin' === $key && true !== $value ) {
+							$this->custom_pt[] = $name;
+						}
+
+						if ( is_object( $value ) && in_array( $key, array( 'cap', 'labels' ), true ) ) {
+							$this->collect_caps_labels( $key, $name, $value );
+						}
+						else {
+							// Standard properties.
+							if ( property_exists( $post_types['post'], $key ) ) {
+								$this->properties[ $key ][ $name ] = $value;
+							}
+							// Custom properties.
+							else {
+								$this->custom_prop[ $key ][ $name ] = $value;
+							}
+						}
+					}
+					unset( $key, $value );
+				}
+				unset( $props );
+			}
+			unset( $name, $tax_obj );
+		}
+
+
+		/**
+		 * Collect the relevant information about capabilities and labels.
+		 *
+		 * @param string $key            Whether this is a capability object or a label object.
+		 * @param string $name           Name of the post type this object applies to.
+		 * @param object $caps_or_labels A capabilities or label object.
+		 */
+		private function collect_caps_labels( $key, $name, $caps_or_labels ) {
+			$object_vars = get_object_vars( $caps_or_labels );
+
+			if ( ! empty( $object_vars ) && is_array( $object_vars ) ) {
+				foreach ( $object_vars as $k => $v ) {
+					if ( 'cap' === $key ) {
+						$this->caps[ $v ][ $name ] = $v;
+					}
+					elseif ( 'labels' === $key ) {
+						$this->labels[ $k ][ $name ] = $v;
+					}
+				}
+				unset( $k, $v );
+			}
+		}
+
+
+		/**
+		 * Create the properties table for the standard properties.
+		 */
+		private function render_standard_properties_table() {
+			if ( count( $this->properties ) > 0 ) {
+				$this->render_property_table(
+					$this->properties,
+					$this->names,
+					__( 'Standard Post Type Properties:', 'debug-bar-post-types' ),
+					$this->double
+				);
+			}
+		}
+
+
+		/**
+		 * Create the properties table for the custom properties.
+		 */
+		private function render_custom_properties_table() {
+			if ( count( $this->custom_prop ) > 0 ) {
+				$this->render_property_table(
+					$this->custom_prop,
+					$this->custom_pt,
+					__( 'Custom Post Type Properties:', 'debug-bar-post-types' ),
+					( ( $this->count_cpt > 4 ) ? true : false )
+				);
+			}
+		}
+
+
+		/**
+		 * Create the capabilities table.
+		 */
+		private function render_capabilities_table() {
+			if ( count( $this->caps ) > 0 ) {
+				$this->render_capability_table(
+					$this->caps,
+					$this->names,
+					$this->double
+				);
+			}
+		}
+
+
+		/**
+		 * Create the table for the defined labels.
+		 */
+		private function render_labels_table() {
+			if ( count( $this->labels ) > 0 ) {
+				$this->render_property_table(
+					$this->labels,
+					$this->names,
+					__( 'Defined Labels:', 'debug-bar-post-types' ),
+					$this->double
+				);
 			}
 		}
 
