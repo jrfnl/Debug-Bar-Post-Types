@@ -46,6 +46,7 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 == Changelog ==
 
 = Trunk =
+* Defer to just in time loading of translations for WP > 4.5.
 * Some code refactoring.
 
 = 1.3.0 (2016-04-12) =
