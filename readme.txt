@@ -5,6 +5,7 @@ Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom P
 Requires at least: 3.4
 Tested up to: 4.8
 Stable tag: 1.4.0
+Requires PHP: 5.2.4
 Depends: Debug Bar
 License: GPLv2
 
