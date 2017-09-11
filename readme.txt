@@ -46,7 +46,9 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 == Changelog ==
 
-= 1.4.0 (2017-07-10) =
+= 1.4.0 =
+_Release date: 2017-07-10_
+
 * Improved usability of the admin notice in case the Debug Bar plugin is not active.
 * The plugin will now add itself to the list of "recently active" plugins if it self-deactivates bcause the Debug Bar plugin is not active.
 * Defer to just in time loading of translations for WP > 4.5.
@@ -56,7 +58,9 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 * The minimum supported WP version is now 3.4, in line with the 0.9 version of the Debug Bar.
 * Tested & found compatible WP 4.8.
 
-= 1.3.0 (2016-04-12) =
+= 1.3.0 =
+_Release date: 2016-04-12_
+
 * Hard-coded the text-domain for better compatibility with [GlotPress](https://translate.wordpress.org/projects/wp-plugins/debug-bar-post-types).
 * Make loading of text-domain compatible with use of the plugin in the `must-use` plugins directory.
 * Fix very minor layout inconsistency in combination with Twenty-Sixteen theme.
@@ -64,15 +68,21 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 * Minor housekeeping.
 * Tested & found compatible with WP 4.5
 
-= 1.2.2 (2015-12-26) =
+= 1.2.2 =
+_Release date: 2015-12-26_
+
 * Fix weird table layout on front-end in combination with Twenty-Sixteen theme.
 * Minor tidying up.
 
-= 1.2.1 (2015-12-05) =
+= 1.2.1 =
+_Release date: 2015-12-05_
+
 * Updated pretty print class & minor tidying up.
 * Tested & found compatible with WP 4.4
 
-= 1.2 (2015-04-18) =
+= 1.2 =
+_Release date: 2015-04-18_
+
 * Added a count of the registered Custom Post Types to the top of the page.
 * Split the display of Post Type properties. Standard post type properties are now shown first. Non-standard properties added by Custom Post Types are shown in a separate table.
 * Added a table showing the defined labels for Post Types.
@@ -82,15 +92,21 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 * Updated language files
 * Updated screenshots
 
-= 1.1.1 (2014-09-05) =
+= 1.1.1 =
+_Release date: 2014-09-05_
+
 * Fix compatibility with the [Plugin Dependencies](https://wordpress.org/plugins/plugin-dependencies/) plugin
 * Tested & found compatible with WP 4.0
 
-= 1.1 (2013-12-02) =
+= 1.1 =
+_Release date: 2013-12-02_
+
 * Minor tidying up
 * Moved pretty print class to separate repository as several plugins are using it now.
 
-= 1.0 (2013-11-29) =
+= 1.0 =
+_Release date: 2013-11-29_
+
 * Initial release
 
 
