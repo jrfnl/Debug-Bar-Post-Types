@@ -30,9 +30,6 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 		const DBPT_STYLES_VERSION = '1.4.0';
 
-		const DBPT_NAME = 'debug-bar-post-types';
-
-
 		/**
 		 * Post Type names - used as column labels.
 		 *
@@ -94,7 +91,6 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		 * Constructor.
 		 */
 		public function init() {
-			$this->load_textdomain( self::DBPT_NAME );
 			$this->title( __( 'Post Types', 'debug-bar-post-types' ) );
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -103,47 +99,11 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 		/**
-		 * Load the plugin text strings.
-		 *
-		 * Compatible with use of the plugin in the must-use plugins directory.
-		 *
-		 * {@internal No longer needed since WP 4.6, though the language loading in
-		 * WP 4.6 only looks at the `wp-content/languages/` directory and disregards
-		 * any translations which may be included with the plugin.
-		 * This is acceptable for plugins hosted on org, especially if the plugin
-		 * is new and never shipped with it's own translations, but not when the plugin
-		 * is hosted elsewhere.
-		 * Can be removed if/when the minimum required version for this plugin is ever
-		 * upped to 4.6. The `languages` directory can be removed in that case too.
-		 * See: {@link https://core.trac.wordpress.org/ticket/34213} and
-		 * {@link https://core.trac.wordpress.org/ticket/34114} }}
-		 *
-		 * @param string $domain Text domain to load.
-		 */
-		protected function load_textdomain( $domain ) {
-			if ( function_exists( '_load_textdomain_just_in_time' ) ) {
-				return;
-			}
-
-			if ( is_textdomain_loaded( $domain ) ) {
-				return;
-			}
-
-			$lang_path = dirname( plugin_basename( __FILE__ ) ) . '/languages';
-			if ( false === strpos( __FILE__, basename( WPMU_PLUGIN_DIR ) ) ) {
-				load_plugin_textdomain( $domain, false, $lang_path );
-			} else {
-				load_muplugin_textdomain( $domain, $lang_path );
-			}
-		}
-
-
-		/**
 		 * Enqueue css file.
 		 */
 		public function enqueue_scripts() {
 			$suffix = ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min' );
-			wp_enqueue_style( self::DBPT_NAME, plugins_url( 'css/debug-bar-post-types' . $suffix . '.css', __FILE__ ), array( 'debug-bar' ), self::DBPT_STYLES_VERSION );
+			wp_enqueue_style( Debug_Bar_Post_Types_Init::DBPT_NAME, plugins_url( 'css/' . Debug_Bar_Post_Types_Init::DBPT_NAME . $suffix . '.css', __FILE__ ), array( 'debug-bar' ), self::DBPT_STYLES_VERSION );
 		}
 
 
@@ -351,7 +311,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			unset( $name );
 			if ( true === $double ) {
 				$header_row .= '
-			<th class="' . self::DBPT_NAME . '-table-end">' . esc_html__( 'Property', 'debug-bar-post-types' ) . '</th>';
+			<th class="' . Debug_Bar_Post_Types_Init::DBPT_NAME . '-table-end">' . esc_html__( 'Property', 'debug-bar-post-types' ) . '</th>';
 			}
 			$header_row .= '
 		</tr>';
@@ -360,7 +320,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			echo // WPCS: XSS ok.
 			'
 		<h3>', esc_html( $table_name ), '</h3>
-		<table class="debug-bar-table ', self::DBPT_NAME, '">
+		<table class="debug-bar-table ', Debug_Bar_Post_Types_Init::DBPT_NAME, '">
 			<thead>
 			', $header_row, '
 			</thead>
@@ -404,7 +364,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				if ( true === $double ) {
 					echo // WPCS: XSS ok.
 					'
-				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // WPCS: XSS ok.
+				<th class="', Debug_Bar_Post_Types_Init::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>'; // WPCS: XSS ok.
 				}
 
 				echo '
@@ -448,7 +408,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 			echo // WPCS: XSS ok.
 			'
 		<h3>', esc_html__( 'Post Type Capabilities:', 'debug-bar-post-types' ), '</h3>
-		<table class="debug-bar-table ', self::DBPT_NAME, ' ', self::DBPT_NAME, '-caps">
+		<table class="debug-bar-table ', Debug_Bar_Post_Types_Init::DBPT_NAME, ' ', Debug_Bar_Post_Types_Init::DBPT_NAME, '-caps">
 			<thead>
 			', $header_row, '
 			</thead>
@@ -482,7 +442,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				if ( true === $double ) {
 					echo // WPCS: XSS ok.
 					'
-				<th class="', self::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>';
+				<th class="', Debug_Bar_Post_Types_Init::DBPT_NAME, '-table-end">', esc_html( $key ), '</th>';
 				}
 
 				echo '
