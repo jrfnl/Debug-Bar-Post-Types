@@ -3,8 +3,8 @@ Contributors: jrf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=995SSNDTCVBJG
 Tags: debugbar, debug-bar, Debug Bar, Post Types, Debug Bar Post Types, Custom Post Type, Custom Post Types, CPT, cpts
 Requires at least: 3.4
-Tested up to: 4.8
-Stable tag: 1.4.0
+Tested up to: 4.9
+Stable tag: 2.0.0
 Requires PHP: 5.2.4
 Depends: Debug Bar
 License: GPLv2
@@ -45,6 +45,16 @@ Have you read what it says in the beautifully red bar at the top of your plugins
 
 
 == Changelog ==
+
+= 2.0.0 =
+_Release date: 2018-01-22_
+
+* Improved compatibility with PHP 7.2.
+* Updated the pretty print dependency to v1.8.0.
+* Refactoring of part of the code base. No functional changes.
+* General housekeeping.
+* Added minimum PHP requirement header. (PHP 5.2.4, in line with WP itself.)
+* Tested & found compatible WP 4.9.
 
 = 1.4.0 =
 _Release date: 2017-07-10_
