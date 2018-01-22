@@ -6,9 +6,9 @@
  * @author      Juliette Reinders Folmer <wpplugins_nospam@adviesenzo.nl>
  * @link        https://github.com/jrfnl/Debug-Bar-Post-Types
  * @since       1.0
- * @version     1.4.0
+ * @version     2.0.0
  *
- * @copyright   2013-2017 Juliette Reinders Folmer
+ * @copyright   2013-2018 Juliette Reinders Folmer
  * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  */
 
@@ -28,7 +28,12 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 	 */
 	class Debug_Bar_Post_Types extends Debug_Bar_Panel {
 
-		const DBPT_STYLES_VERSION = '1.4.0';
+		/**
+		 * Plugin version nr for use with enqueuing scripts and styles.
+		 *
+		 * @var string
+		 */
+		const DBPT_STYLES_VERSION = '2.0.0';
 
 		/**
 		 * Post Type names - used as column labels.
@@ -103,7 +108,12 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 		 */
 		public function enqueue_scripts() {
 			$suffix = ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min' );
-			wp_enqueue_style( Debug_Bar_Post_Types_Init::DBPT_NAME, plugins_url( 'css/' . Debug_Bar_Post_Types_Init::DBPT_NAME . $suffix . '.css', __FILE__ ), array( 'debug-bar' ), self::DBPT_STYLES_VERSION );
+			wp_enqueue_style(
+				Debug_Bar_Post_Types_Init::DBPT_NAME,
+				plugins_url( 'css/' . Debug_Bar_Post_Types_Init::DBPT_NAME . $suffix . '.css', __FILE__ ),
+				array( 'debug-bar' ),
+				self::DBPT_STYLES_VERSION
+			);
 		}
 
 
@@ -138,7 +148,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 
 
 			echo '
-		<h2><span>', esc_html__( 'Total Post Types:', 'debug-bar-post-types' ), '</span>', absint( $count ), '</h2>';
+		<h2><span>', esc_html__( 'Total Post Types:', 'debug-bar-post-types' ), '</span>', (int) $count, '</h2>';
 
 			if ( is_array( $wp_post_types ) && $count > 0 ) {
 
@@ -147,7 +157,7 @@ if ( ! class_exists( 'Debug_Bar_Post_Types' ) && class_exists( 'Debug_Bar_Panel'
 				if ( ! empty( $this->custom_pt ) ) {
 					$this->count_cpt = count( $this->custom_pt );
 					echo '
-		<h2><span>', esc_html__( 'Custom Post Types:', 'debug-bar-post-types' ), '</span>', absint( $this->count_cpt ), '</h2>';
+		<h2><span>', esc_html__( 'Custom Post Types:', 'debug-bar-post-types' ), '</span>', (int) $this->count_cpt, '</h2>';
 				}
 
 				$this->render_standard_properties_table();
